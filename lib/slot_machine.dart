@@ -2,17 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'dart:math';
 
-class _SlotMachineState
-    extends State<SlotMachine> {
-  static const _cherry =
-      'assets/images/cherry.png';
+class _SlotMachineState extends State<SlotMachine> {
+  static const _cherry = 'assets/images/cherry.png';
   static const _lemon = 'assets/images/lemon.png';
   static const _seven = 'assets/images/seven.png';
-  static const _symbols = [
-    _cherry,
-    _lemon,
-    _seven,
-  ];
+  static const _symbols = [_cherry, _lemon, _seven];
   final _random = Random();
   var _coins = 10;
   var _slot1 = _cherry;
@@ -37,18 +31,9 @@ class _SlotMachineState
       return;
     }
     setState(() {
-      _slot1 =
-          _symbols[_random.nextInt(
-            _symbols.length,
-          )];
-      _slot2 =
-          _symbols[_random.nextInt(
-            _symbols.length,
-          )];
-      _slot3 =
-          _symbols[_random.nextInt(
-            _symbols.length,
-          )];
+      _slot1 = _symbols[_random.nextInt(_symbols.length)];
+      _slot2 = _symbols[_random.nextInt(_symbols.length)];
+      _slot3 = _symbols[_random.nextInt(_symbols.length)];
       if (_slot1 == _slot2 && _slot2 == _slot3) {
         _coins += 3;
         _message = 'Победа! 🎉 +3 монеты';
@@ -80,23 +65,11 @@ class _SlotMachineState
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset(
-                _slot1,
-                width: 100,
-                height: 100,
-              ),
+              Image.asset(_slot1, width: 100, height: 100),
               const SizedBox(width: 16),
-              Image.asset(
-                _slot2,
-                width: 100,
-                height: 100,
-              ),
+              Image.asset(_slot2, width: 100, height: 100),
               const SizedBox(width: 16),
-              Image.asset(
-                _slot3,
-                width: 100,
-                height: 100,
-              ),
+              Image.asset(_slot3, width: 100, height: 100),
             ],
           ),
         ),
@@ -104,10 +77,7 @@ class _SlotMachineState
         Text(
           _message,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.white,
-          ),
+          style: const TextStyle(fontSize: 20, color: Colors.white),
         ),
         const SizedBox(height: 40),
         ElevatedButton(
@@ -128,6 +98,17 @@ class _SlotMachineState
             ),
           ),
         ),
+        const SizedBox(height: 12),
+        TextButton(
+          onPressed: _reset,
+          child: const Text(
+            'Начать заново',
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 16,
+            ), // TextStyle
+          ), // Text
+        ), // TextButton
       ],
     );
   }
@@ -137,6 +118,5 @@ class SlotMachine extends StatefulWidget {
   const SlotMachine({super.key});
 
   @override
-  State<SlotMachine> createState() =>
-      _SlotMachineState();
+  State<SlotMachine> createState() => _SlotMachineState();
 }
