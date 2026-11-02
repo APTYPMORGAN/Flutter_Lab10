@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'slot_row.dart';
+
 import 'dart:math';
 
 class _SlotMachineState extends State<SlotMachine> {
@@ -65,11 +67,7 @@ class _SlotMachineState extends State<SlotMachine> {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset(_slot1, width: 100, height: 100),
-              const SizedBox(width: 16),
-              Image.asset(_slot2, width: 100, height: 100),
-              const SizedBox(width: 16),
-              Image.asset(_slot3, width: 100, height: 100),
+              SlotRow(slot1: _slot1, slot2: _slot2, slot3: _slot3),
             ],
           ),
         ),
