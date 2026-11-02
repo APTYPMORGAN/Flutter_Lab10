@@ -1,17 +1,24 @@
-# slot_machine_kuriev
+# Лабораторная работа №9. Flutter: StatefulWidget и управление состоянием
 
-A new Flutter project.
+#### Автор:
 
-## Getting Started
+- Куриев Артур
+- ИСП-241
+- Дата сдачи: 02.11.2026
 
-This project is a starting point for a Flutter application.
+### Что я изучил:
 
-A few resources to get you started if this is your first Flutter project:
+1. Изучил разницу между `StatelessWidget` и `StatefulWidget`
+2. Научился менять состояние приложения с помощью `setState()`
+3. Научился работать с картинками и кнопками во `Flutter`
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### Финальный скриншот
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](img/step4_Kuriev.png)
+
+### Инструкция по запуску:
+
+1. `git clone https://github.com/APTYPMORGAN/Flutter_Lab9`
+2. `cd Flutter_Lab9`
+3. `flutter pub get`
+4. `flutter run -d chrome`
