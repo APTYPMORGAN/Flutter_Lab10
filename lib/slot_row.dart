@@ -17,11 +17,23 @@ class SlotRow extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset(slot1, width: 100, height: 100),
+          Image.asset(
+            slot1,
+            width: 100,
+            height: 100,
+          ),
           const SizedBox(width: 16),
-          Image.asset(slot2, width: 100, height: 100),
+          Image.asset(
+            slot2,
+            width: 100,
+            height: 100,
+          ),
           const SizedBox(width: 16),
-          Image.asset(slot3, width: 100, height: 100),
+          Image.asset(
+            slot3,
+            width: 100,
+            height: 100,
+          ),
         ],
       ),
     );
