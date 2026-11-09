@@ -2,6 +2,17 @@ name: slot_machine_kuriev
 description: "A new Flutter project."
 publish_to: 'none'
 
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/icon/app_icon.png
+  min_sdk_android: 24
+  web:
+    generate: true
+    image_path: assets/icon/app_icon.png
+    background_color: "#4527A0"
+    theme_color: "#4527A0"
+
 version: 1.0.0+1
 
 environment:
@@ -17,11 +28,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: 0.14.4
 
   flutter_lints: ^6.0.0
 
 flutter:
-
   uses-material-design: true
   assets:
     - assets/images/
